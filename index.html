@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MinkZinnHub Scripts</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #copy-button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    #minkzinn-label {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button id="copy-button" onclick="copyScript()">Copy Script</button>
+  <div id="minkzinn-label">MinkZinnHub Scripts</div>
+
+  <script>
+    function copyScript() {
+      const scriptUrl = "https://raw.githubusercontent.com/scripterCreator/MinkZinn999/main/MinkZinn999999999.lua";
+      navigator.clipboard.writeText(`loadstring(game:HttpGet("${scriptUrl}"))()`)
+        .then(() => {
+          alert("Script copied successfully!");
+        })
+        .catch(() => {
+          alert("Failed to copy script!");
+        });
+    }
+  </script>
+</body>
+</html>
